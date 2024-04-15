@@ -227,7 +227,8 @@ func TestNewDice(t *testing.T) {
 }
 
 func TestNewDiceWithEmoji(t *testing.T) {
-	dice := NewDiceWithEmoji(42, "🏀")
+	topicID := 11044
+	dice := NewDiceWithEmoji(42, &topicID, "🏀")
 
 	if dice.ChatID != 42 ||
 		dice.Emoji != "🏀" {
